@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-bg-primary: #090B0D;
+    --color-bg-secondary: #13181C;
+    --color-bg-tertiary: #1B2227;
+    --color-card: #0F1418;
+    --color-card-border: #1F2A24;
+    --color-accent-green: #00E676;
+    --color-accent-green-dark: #059669;
+    --color-accent-green-glow: rgba(0, 230, 118, 0.25);
+    --color-accent-gold: #E5C158;
+    --color-text-main: #ECEFF1;
+    --color-text-muted: #8E9BAE;
+    --color-text-subtle: #4D5B6A;
+  }
+
+  body {
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-main);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Chakra Petch', sans-serif;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Subtle stealth grid */
+.bg-stealth-grid {
+  background-image: 
+    linear-gradient(to right, rgba(0, 230, 118, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 230, 118, 0.03) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+/* Stealth radar circle rings */
+.bg-radar-glow {
+  background: radial-gradient(circle at 50% 30%, rgba(0, 230, 118, 0.08) 0%, rgba(9, 11, 13, 0) 65%);
+}
+
+/* Custom discreet scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #090B0D;
+}
+::-webkit-scrollbar-thumb {
+  background: #1B2620;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00E676;
+}
+
+/* Subtle stealth glow animations */
+@keyframes eyePulse {
+  0%, 100% { opacity: 0.85; filter: drop-shadow(0 0 4px #00E676); }
+  50% { opacity: 1; filter: drop-shadow(0 0 10px #00E676); }
+}
+
+.animate-eye-pulse {
+  animation: eyePulse 3s ease-in-out infinite;
+}
+
+@keyframes terminalBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: terminalBlink 1s infinite;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "MemeAI — Hood & HoodCat | Robinhood Blockchain",
+  "description": "The stealth AI & meme duo operating exclusively on Robinhood Blockchain. Hood designs the algorithms, HoodCat unleashes the chaos.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <!-- Background rounded hexagon/shield -->
+  <rect width="128" height="128" rx="28" fill="#0A0C0E"/>
+  <rect x="1.5" y="1.5" width="125" height="125" rx="26.5" stroke="#162E20" stroke-width="3"/>
+  <rect x="3" y="3" width="122" height="122" rx="25" stroke="#00E676" stroke-width="1" stroke-opacity="0.3"/>
+  
+  <!-- Subtle cyber glow circle -->
+  <circle cx="64" cy="64" r="46" fill="#00E676" fill-opacity="0.06"/>
+  
+  <!-- Stealth Hood Silhouette with Integrated Cat Ear Geometry -->
+  <g filter="drop-shadow(0 0 8px rgba(0, 230, 118, 0.45))">
+    <!-- Hood Cape / Shoulders Base -->
+    <path d="M28 98 C36 84, 46 80, 64 80 C82 80, 92 84, 100 98 C88 102, 40 102, 28 98 Z" fill="#0E1713" stroke="#00E676" stroke-width="2"/>
+    
+    <!-- Outer Cowl + Cat Ears shape -->
+    <path d="M64 22 L74 38 L92 34 L82 54 C88 64, 86 78, 80 84 C74 72, 70 68, 64 68 C58 68, 54 72, 48 84 C42 78, 40 64, 46 54 L36 34 L54 38 Z" 
+          fill="#0D1612" 
+          stroke="#00E676" 
+          stroke-width="2.5" 
+          stroke-linejoin="round"/>
+          
+    <!-- Inner Dark Shadow -->
+    <path d="M64 36 C52 48, 48 66, 52 74 C56 70, 60 68, 64 68 C68 68, 72 70, 76 74 C80 66, 76 48, 64 36 Z" fill="#050706"/>
+    
+    <!-- Signature Glowing AI Eyes (Hood & Cat duality) -->
+    <!-- Left Eye -->
+    <path d="M52 56 L60 59 L54 62 Z" fill="#00E676"/>
+    <circle cx="56" cy="59" r="1.5" fill="#FFFFFF"/>
+    <!-- Right Eye -->
+    <path d="M76 56 L68 59 L74 62 Z" fill="#00E676"/>
+    <circle cx="72" cy="59" r="1.5" fill="#FFFFFF"/>
+
+    <!-- Center AI Node Line -->
+    <path d="M64 28 L64 42" stroke="#00E676" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="64" cy="44" r="2" fill="#E5C158"/>
+  </g>
+</svg>

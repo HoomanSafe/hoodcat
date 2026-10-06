@@ -1,0 +1,55 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+import React from 'react';
+import { Navbar } from './components/Navbar';
+import { Hero } from './components/Hero';
+import { Characters } from './components/Characters';
+import { DuoPhilosophy } from './components/DuoPhilosophy';
+import { AiTerminal } from './components/AiTerminal';
+import { MemeGenerator } from './components/MemeGenerator';
+import { MemeGallery } from './components/MemeGallery';
+import { RobinhoodSection } from './components/RobinhoodSection';
+import { Tokenomics } from './components/Tokenomics';
+import { Footer } from './components/Footer';
+
+export default function App() {
+  return (
+    <div className="min-h-screen bg-[#090B0D] text-[#ECEFF1] flex flex-col selection:bg-[#00E676] selection:text-[#090B0D]">
+      {/* Navigation */}
+      <Navbar />
+
+      {/* Main Experience Stream */}
+      <main className="flex-1">
+        {/* 01: Hero Scene with Eye Tracker & Real Character Renders */}
+        <Hero />
+
+        {/* 02 & 03: Meet Hood & Meet HoodCat with Interactive Easter Egg */}
+        <Characters />
+
+        {/* 04 & 05: The Duo Dynamics & What is MemeAI */}
+        <DuoPhilosophy />
+
+        {/* 06: Interactive AI Console (HoodCat Command Terminal) */}
+        <AiTerminal />
+
+        {/* 07: Offline MemeAI Generator */}
+        <MemeGenerator />
+
+        {/* 08: The Meme Vault Archive (Original Graphic Scenes) */}
+        <MemeGallery />
+
+        {/* 09: Dedicated Robinhood Blockchain Section */}
+        <RobinhoodSection />
+
+        {/* 10: Configurable Token Metrics Architecture */}
+        <Tokenomics />
+      </main>
+
+      {/* Footer */}
+      <Footer />
+    </div>
+  );
+}

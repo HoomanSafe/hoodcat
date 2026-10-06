@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 90" fill="none">
+  <!-- Symbol -->
+  <g transform="translate(10, 5) scale(0.85)">
+    <!-- Shield / Mark background -->
+    <rect width="90" height="90" rx="20" fill="#0D1110" stroke="#162E20" stroke-width="2"/>
+    <rect x="2" y="2" width="86" height="86" rx="18" stroke="#00E676" stroke-width="1" stroke-opacity="0.25"/>
+    
+    <!-- Hood + Cat Ear Emblem -->
+    <path d="M45 14 L53 28 L68 25 L59 42 C64 50, 62 61, 57 66 C53 56, 49 53, 45 53 C41 53, 37 56, 33 66 C28 61, 26 50, 31 42 L22 25 L37 28 Z" 
+          fill="#111B16" 
+          stroke="#00E676" 
+          stroke-width="2.5" 
+          stroke-linejoin="round"/>
+          
+    <path d="M45 26 C37 35, 34 48, 37 54 C40 52, 42 51, 45 51 C48 51, 50 52, 53 54 C56 48, 53 35, 45 26 Z" fill="#060907"/>
+    
+    <!-- Glowing eyes -->
+    <path d="M37 44 L43 46 L39 48 Z" fill="#00E676"/>
+    <path d="M53 44 L47 46 L51 48 Z" fill="#00E676"/>
+    <circle cx="45" cy="32" r="1.5" fill="#E5C158"/>
+  </g>
+
+  <!-- Wordmark HoodCAT -->
+  <text x="106" y="52" fill="#F4F4F5" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="38" letter-spacing="0.04em">Hood<tspan fill="#00E676">CAT</tspan></text>
+  
+  <!-- Ticker Badge -->
+  <rect x="286" y="28" width="58" height="26" rx="6" fill="#00E676" fill-opacity="0.15" stroke="#00E676" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="315" y="45" fill="#00E676" font-family="monospace, monospace" font-size="12" font-weight="800" text-anchor="middle">$HCAT</text>
+  
+  <!-- Subtle Tag: ROBINHOOD BLOCKCHAIN -->
+  <text x="108" y="73" fill="#809689" font-family="monospace, monospace" font-size="11" font-weight="700" letter-spacing="0.18em">ROBINHOOD BLOCKCHAIN</text>
+</svg>
