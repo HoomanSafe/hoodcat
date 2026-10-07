@@ -57,7 +57,7 @@ export const PROJECT_CONFIG = {
   ],
 
   SOCIAL_LINKS: [
-    { label: "X / Twitter", url: "#", icon: "twitter", available: true },
+    { label: "X / Twitter", url: "https://x.com/hoodcatfun", icon: "twitter", available: true },
     { label: "Telegram", url: "#", icon: "telegram", available: true },
     { label: "Discord", url: "#", icon: "discord", available: true },
     { label: "Robinhood Chain Explorer", url: "#", icon: "explorer", available: false },
