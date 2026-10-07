@@ -39,7 +39,7 @@ export const PROJECT_CONFIG = {
   SUBTITLE: "Hood constructs the neural vectors. HoodCAT executes spontaneous pandemonium.",
   TICKER: "$HCAT",
   NETWORK: "Robinhood Blockchain",
-  CONTRACT_ADDRESS: "TBD", // Configurable: Update upon official deployment on Robinhood Blockchain
+  CONTRACT_ADDRESS: "0x6c3d8f1f2645733444aecaa20ebddd075bf877bb", // Configurable: Update upon official deployment on Robinhood Blockchain
   TOTAL_SUPPLY: "1,000,000,000 $HCAT",
   ECOSYSTEM: "Robinhood Blockchain Native",
   STATUS: "Stealth Genesis Stage",
