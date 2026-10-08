@@ -11,13 +11,13 @@ import { DuoPhilosophy } from './components/DuoPhilosophy';
 import { AiTerminal } from './components/AiTerminal';
 import { MemeGenerator } from './components/MemeGenerator';
 import { MemeGallery } from './components/MemeGallery';
-import { RobinhoodSection } from './components/RobinhoodSection';
+import { SolanaSection } from './components/SolanaSection';
 import { Tokenomics } from './components/Tokenomics';
 import { Footer } from './components/Footer';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#090B0D] text-[#ECEFF1] flex flex-col selection:bg-[#00E676] selection:text-[#090B0D]">
+    <div className="min-h-screen bg-[#080A0E] text-[#ECEFF1] flex flex-col selection:bg-[#14F195] selection:text-[#080A0E]">
       {/* Navigation */}
       <Navbar />
 
@@ -29,7 +29,7 @@ export default function App() {
         {/* 02 & 03: Meet Hood & Meet HoodCat with Interactive Easter Egg */}
         <Characters />
 
-        {/* 04 & 05: The Duo Dynamics & What is MemeAI */}
+        {/* 04 & 05: The Duo Dynamics & What is HoodCAT */}
         <DuoPhilosophy />
 
         {/* 06: Interactive AI Console (HoodCat Command Terminal) */}
@@ -41,8 +41,8 @@ export default function App() {
         {/* 08: The Meme Vault Archive (Original Graphic Scenes) */}
         <MemeGallery />
 
-        {/* 09: Dedicated Robinhood Blockchain Section */}
-        <RobinhoodSection />
+        {/* 09: Dedicated Solana & pump.fun Section */}
+        <SolanaSection />
 
         {/* 10: Configurable Token Metrics Architecture */}
         <Tokenomics />

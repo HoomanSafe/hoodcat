@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { PROJECT_CONFIG } from '../config/project';
 import { StealthImage } from './StealthImage';
-import { Shield, Sparkles, Terminal, ArrowRight, Activity, Zap, Eye } from 'lucide-react';
+import { Terminal, ArrowRight, ExternalLink, Eye, TrendingUp, Sparkles } from 'lucide-react';
+import { PumpFunIcon, SolanaIcon } from './PumpFunIcon';
 
 export const Hero: React.FC = () => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -9,7 +10,6 @@ export const Hero: React.FC = () => {
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      // Calculate normalized mouse coords (-1 to 1)
       const x = (e.clientX / window.innerWidth) * 2 - 1;
       const y = (e.clientY / window.innerHeight) * 2 - 1;
       setMousePos({ x, y });
@@ -21,93 +21,104 @@ export const Hero: React.FC = () => {
 
   return (
     <section className="relative min-h-screen pt-28 pb-20 flex items-center justify-center overflow-hidden bg-stealth-grid">
-      {/* Background ambient lighting */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-[#00E676]/[0.05] rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute top-1/2 right-10 w-[400px] h-[400px] bg-[#162D21]/20 rounded-full blur-[100px] pointer-events-none" />
+      {/* Background ambient lighting - Solana gradient glows */}
+      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[#9945FF]/[0.08] rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/3 right-1/4 w-[600px] h-[600px] bg-[#14F195]/[0.07] rounded-full blur-[140px] pointer-events-none" />
 
-      {/* Subtle top badge */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="flex flex-col items-center text-center mb-8">
-          {/* Ecosystem Verification Chip */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0D1511] border border-[#1E3024] mb-6 shadow-sm">
-            <span className="w-2 h-2 rounded-full bg-[#00E676] animate-ping" />
-            <span className="font-mono text-xs text-[#00E676] tracking-wider font-semibold">
-              ROBINHOOD BLOCKCHAIN EXCLUSIVE
+          
+          {/* Ecosystem Verification Chip - Solana & pump.fun */}
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#0E131C] border border-[#233530] mb-6 shadow-[0_0_20px_rgba(20,241,149,0.15)]">
+            <SolanaIcon size={16} />
+            <span className="font-mono text-xs text-[#9945FF] font-bold tracking-wider">
+              SOLANA
             </span>
-            <span className="text-[#3F5447] text-xs">|</span>
-            <span className="text-xs text-[#95A89E] font-medium">ORIGINAL CREATIVE UNIVERSE</span>
+            <span className="text-[#3F544D] text-xs">|</span>
+            <PumpFunIcon size={15} />
+            <span className="font-mono text-xs text-[#14F195] font-extrabold tracking-wider animate-pulse">
+              LAUNCHING ON PUMP.FUN
+            </span>
           </div>
 
           {/* Main Title */}
           <div className="flex flex-col items-center">
             <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black font-display tracking-tight text-white mb-2 leading-none">
-              Hood<span className="text-[#00E676] drop-shadow-[0_0_25px_rgba(0,230,118,0.4)]">CAT</span>
+              Hood<span className="text-[#14F195] drop-shadow-[0_0_30px_rgba(20,241,149,0.5)]">CAT</span>
             </h1>
-            <div className="inline-flex items-center gap-2 mb-4 font-mono text-sm sm:text-base text-[#00E676] font-bold tracking-widest bg-[#0C1510] px-4 py-1 rounded-full border border-[#193223]">
+            <div className="inline-flex items-center gap-2 mb-4 font-mono text-sm sm:text-base text-[#14F195] font-bold tracking-widest bg-[#0C1518] px-4 py-1 rounded-full border border-[#19322D]">
               <span>TICKER:</span>
-              <span className="text-white bg-[#00E676]/20 px-2.5 py-0.5 rounded border border-[#00E676]/40 text-[#00E676] shadow-[0_0_10px_rgba(0,230,118,0.2)]">
+              <span className="text-white bg-[#14F195]/20 px-2.5 py-0.5 rounded border border-[#14F195]/40 text-[#14F195] shadow-[0_0_10px_rgba(20,241,149,0.25)]">
                 {PROJECT_CONFIG.TICKER}
               </span>
-              <span className="text-[#4E6759]">|</span>
-              <span className="text-[#98ADA2] text-xs">ROBINHOOD BLOCKCHAIN</span>
+              <span className="text-[#4E675E]">|</span>
+              <span className="text-[#9945FF] text-xs font-black">SOLANA ECOSYSTEM</span>
             </div>
           </div>
 
           {/* Subtitle */}
-          <p className="max-w-2xl text-lg sm:text-xl text-[#B4C4BC] font-medium mb-6">
+          <p className="max-w-2xl text-lg sm:text-xl text-[#B4C4BF] font-medium mb-6">
             <strong className="text-white">HOOD</strong> architects the neural vectors.{' '}
-            <strong className="text-[#00E676]">HOODCAT</strong> unchains spontaneous pandemonium.
+            <strong className="text-[#14F195]">HOODCAT</strong> unchains spontaneous pandemonium on <span className="text-[#10B981] font-bold">pump.fun</span>.
           </p>
 
-          <p className="max-w-xl text-xs sm:text-sm text-[#7D9186] font-mono mb-8">
-            The modern digital Robin Hood duo operating from the encrypted shadows of the Robinhood Blockchain.
+          <p className="max-w-xl text-xs sm:text-sm text-[#7D918A] font-mono mb-8">
+            The modern digital stealth duo bringing covert AI models and high-octane meme culture to Solana.
           </p>
 
-          {/* CTA Group */}
+          {/* CTA Group with prominent pump.fun button */}
           <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-12">
+            {/* Primary pump.fun Launch Button */}
             <a
-              href="#characters"
-              className="px-6 py-3 rounded-lg bg-[#00E676] hover:bg-[#00c864] text-[#090B0D] font-display font-bold text-sm tracking-wide uppercase transition-all duration-200 transform hover:-translate-y-0.5 shadow-[0_0_20px_rgba(0,230,118,0.3)] flex items-center gap-2"
+              href={PROJECT_CONFIG.PUMPFUN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-7 py-3.5 rounded-xl pumpfun-pill-btn font-display font-black text-sm tracking-wider uppercase transition-all duration-200 transform hover:-translate-y-0.5 flex items-center gap-2.5"
             >
-              <span>Meet The Operatives</span>
-              <ArrowRight className="w-4 h-4" />
+              <PumpFunIcon size={20} />
+              <span>Trade on pump.fun</span>
+              <ExternalLink className="w-4 h-4 opacity-80" />
             </a>
 
+            {/* DexScreener Chart Button */}
+            <a
+              href={PROJECT_CONFIG.DEXSCREENER_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3.5 rounded-xl bg-[#101620] hover:bg-[#16212D] text-[#ECEFF1] border border-[#233532] hover:border-[#14F195]/50 font-display font-bold text-sm tracking-wide uppercase transition-all duration-200 flex items-center gap-2"
+            >
+              <TrendingUp className="w-4 h-4 text-[#14F195]" />
+              <span>DexScreener</span>
+            </a>
+
+            {/* AI Ops Simulator */}
             <a
               href="#ai-terminal"
-              className="px-6 py-3 rounded-lg bg-[#111714] hover:bg-[#16221B] text-[#ECEFF1] border border-[#213528] hover:border-[#00E676]/40 font-display font-semibold text-sm tracking-wide uppercase transition-all duration-200 flex items-center gap-2"
+              className="px-5 py-3.5 rounded-xl bg-[#0D1219] hover:bg-[#131C24] text-[#A2B6AF] hover:text-white border border-[#1B2724] text-xs font-mono transition-all duration-200 flex items-center gap-2"
             >
-              <Terminal className="w-4 h-4 text-[#00E676]" />
-              <span>Simulate AI Ops</span>
-            </a>
-
-            <a
-              href="#memes"
-              className="px-6 py-3 rounded-lg bg-[#0F1412] hover:bg-[#141C18] text-[#9DB0A6] border border-[#1A261F] text-sm font-medium transition-all duration-200 flex items-center gap-2"
-            >
-              <Sparkles className="w-4 h-4 text-[#E5C158]" />
-              <span>Meme Vault (8 Scenes)</span>
+              <Terminal className="w-4 h-4 text-[#9945FF]" />
+              <span>Simulate AI Terminal</span>
             </a>
           </div>
         </div>
 
         {/* Cinematic Character Showcase Card with Eye Tracking Interaction */}
-        <div className="relative max-w-5xl mx-auto rounded-2xl bg-gradient-to-b from-[#111814] to-[#0A0D0E] border border-[#1D2C22] p-4 sm:p-6 shadow-[0_20px_60px_rgba(0,0,0,0.8)] overflow-hidden">
+        <div className="relative max-w-5xl mx-auto rounded-2xl bg-gradient-to-b from-[#10161C] to-[#0A0D12] border border-[#1E2E2A] p-4 sm:p-6 shadow-[0_20px_60px_rgba(0,0,0,0.85)] overflow-hidden">
           {/* Tactical Header bar */}
-          <div className="flex items-center justify-between pb-4 mb-4 border-b border-[#18261E] text-xs font-mono text-[#7D9186]">
+          <div className="flex items-center justify-between pb-4 mb-4 border-b border-[#182623] text-xs font-mono text-[#7D918A]">
             <div className="flex items-center gap-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#00E676]/80 animate-pulse" />
-              <span className="text-white font-semibold">FEED: ENCRYPTED NODE #8092</span>
-              <span className="hidden sm:inline text-[#3F5447]">|</span>
-              <span className="hidden sm:inline text-[#9DB0A6]">TARGET: ROBINHOOD BLOCKCHAIN</span>
+              <span className="w-2.5 h-2.5 rounded-full bg-[#14F195] animate-pulse" />
+              <span className="text-white font-semibold">FEED: SOLANA NODE #0042</span>
+              <span className="hidden sm:inline text-[#3F544D]">|</span>
+              <span className="hidden sm:inline text-[#14F195]">TARGET: PUMP.FUN BONDING CURVE</span>
             </div>
 
             {/* View Switcher */}
-            <div className="flex items-center bg-[#090D0B] p-1 rounded-lg border border-[#1A271F] gap-1">
+            <div className="flex items-center bg-[#080B0F] p-1 rounded-lg border border-[#1B2925] gap-1">
               <button
                 onClick={() => setActiveTab('duo')}
                 className={`px-2.5 py-1 rounded text-[11px] font-sans font-medium transition-colors ${
-                  activeTab === 'duo' ? 'bg-[#00E676] text-[#090B0D] font-bold' : 'text-[#85988F] hover:text-white'
+                  activeTab === 'duo' ? 'bg-[#14F195] text-[#080A0D] font-bold' : 'text-[#859892] hover:text-white'
                 }`}
               >
                 THE DUO
@@ -115,7 +126,7 @@ export const Hero: React.FC = () => {
               <button
                 onClick={() => setActiveTab('hood')}
                 className={`px-2.5 py-1 rounded text-[11px] font-sans font-medium transition-colors ${
-                  activeTab === 'hood' ? 'bg-[#00E676] text-[#090B0D] font-bold' : 'text-[#85988F] hover:text-white'
+                  activeTab === 'hood' ? 'bg-[#14F195] text-[#080A0D] font-bold' : 'text-[#859892] hover:text-white'
                 }`}
               >
                 HOOD
@@ -123,7 +134,7 @@ export const Hero: React.FC = () => {
               <button
                 onClick={() => setActiveTab('hoodcat')}
                 className={`px-2.5 py-1 rounded text-[11px] font-sans font-medium transition-colors ${
-                  activeTab === 'hoodcat' ? 'bg-[#00E676] text-[#090B0D] font-bold' : 'text-[#85988F] hover:text-white'
+                  activeTab === 'hoodcat' ? 'bg-[#14F195] text-[#080A0D] font-bold' : 'text-[#859892] hover:text-white'
                 }`}
               >
                 HOODCAT
@@ -132,7 +143,7 @@ export const Hero: React.FC = () => {
           </div>
 
           {/* Interactive Artwork Display */}
-          <div className="relative rounded-xl overflow-hidden aspect-[16/9] sm:aspect-[21/9] max-h-[500px] border border-[#1F2F25] group">
+          <div className="relative rounded-xl overflow-hidden aspect-[16/9] sm:aspect-[21/9] max-h-[500px] border border-[#1F312B] group">
             {activeTab === 'duo' && (
               <StealthImage
                 src="/assets/hood-duo.webp"
@@ -158,7 +169,7 @@ export const Hero: React.FC = () => {
               />
             )}
 
-            {/* Simulated Eye Tracking Gaze Crosshair that follows mouse subtly */}
+            {/* Simulated Eye Tracking Gaze Crosshair with Solana Glow */}
             <div
               className="absolute pointer-events-none transition-transform duration-150 ease-out hidden sm:flex items-center justify-center"
               style={{
@@ -168,35 +179,34 @@ export const Hero: React.FC = () => {
               }}
             >
               <div className="relative">
-                <div className="w-12 h-12 rounded-full border border-[#00E676]/40 flex items-center justify-center animate-ping duration-1000 opacity-30" />
+                <div className="w-12 h-12 rounded-full border border-[#14F195]/40 flex items-center justify-center animate-ping duration-1000 opacity-30" />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-4 h-4 rounded-full border border-[#00E676] flex items-center justify-center">
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#00E676] shadow-[0_0_8px_#00E676]" />
+                  <div className="w-4 h-4 rounded-full border border-[#14F195] flex items-center justify-center">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#14F195] shadow-[0_0_8px_#14F195]" />
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Tactical overlay gradients */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#090D0B] via-transparent to-transparent opacity-80 pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#080B0F] via-transparent to-transparent opacity-80 pointer-events-none" />
 
             {/* Bottom Caption Overlay */}
             <div className="absolute bottom-4 left-4 right-4 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-3 text-white">
               <div>
-                <span className="font-mono text-[10px] uppercase tracking-widest text-[#00E676] font-bold">
-                  {activeTab === 'duo' ? 'SYNCHRONIZED CO-OPERATION' : activeTab === 'hood' ? 'STRATEGIC CORE' : 'CHAOS ENGINE'}
+                <span className="font-mono text-[10px] uppercase tracking-widest text-[#14F195] font-bold">
+                  {activeTab === 'duo' ? 'SOLANA STEALTH ENGINE' : activeTab === 'hood' ? 'NEURAL COMPILER' : 'PUMP.FUN APER'}
                 </span>
                 <h3 className="font-display font-bold text-lg sm:text-2xl text-white">
                   {activeTab === 'duo'
-                    ? 'Silent Code. Unrestrained Memes.'
+                    ? 'Instant Solana Finality. Unhinged Memes.'
                     : activeTab === 'hood'
-                    ? 'Hood: "Why compute in daylight when the void delivers?"'
-                    : 'HoodCat: "Your tokenomics are neat. Can I scratch them?"'}
+                    ? 'Hood: "Why compute in daylight when Solana TPS processes in milliseconds?"'
+                    : 'HoodCat: "The pump.fun bonding curve is my personal scratching post."'}
                 </h3>
               </div>
-              <div className="flex items-center gap-2 bg-[#090D0B]/80 backdrop-blur-md px-3 py-1.5 rounded border border-[#1B2920] text-xs font-mono text-[#00E676]">
+              <div className="flex items-center gap-2 bg-[#080B0F]/85 backdrop-blur-md px-3 py-1.5 rounded border border-[#1B2925] text-xs font-mono text-[#14F195]">
                 <Eye className="w-3.5 h-3.5 animate-pulse" />
-                <span>CYBER GAZE LOCKED</span>
+                <span>SOLANA NODE SYNCED</span>
               </div>
             </div>
           </div>
@@ -204,11 +214,11 @@ export const Hero: React.FC = () => {
           {/* Quick Metrics Strip */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-4 pt-2">
             {PROJECT_CONFIG.STATS.map((stat, i) => (
-              <div key={i} className="bg-[#090D0B] rounded-lg p-3 border border-[#16221A] text-left">
-                <span className="text-[10px] font-mono text-[#7D9186] uppercase tracking-wider block">
+              <div key={i} className="bg-[#080B0F] rounded-lg p-3 border border-[#16221D] text-left">
+                <span className="text-[10px] font-mono text-[#7D918A] uppercase tracking-wider block">
                   {stat.label}
                 </span>
-                <span className="text-sm font-display font-bold text-[#E2ECE6] mt-0.5 block truncate">
+                <span className="text-sm font-display font-bold text-[#E2ECE8] mt-0.5 block truncate">
                   {stat.value}
                 </span>
               </div>

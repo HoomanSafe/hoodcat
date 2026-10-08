@@ -2,14 +2,17 @@
 
 @layer base {
   :root {
-    --color-bg-primary: #090B0D;
-    --color-bg-secondary: #13181C;
-    --color-bg-tertiary: #1B2227;
-    --color-card: #0F1418;
-    --color-card-border: #1F2A24;
-    --color-accent-green: #00E676;
+    --color-bg-primary: #080A0D;
+    --color-bg-secondary: #10141A;
+    --color-bg-tertiary: #161D24;
+    --color-card: #0D1217;
+    --color-card-border: #1C2723;
+    --color-solana-purple: #9945FF;
+    --color-solana-green: #14F195;
+    --color-pump-green: #10B981;
+    --color-accent-green: #14F195;
     --color-accent-green-dark: #059669;
-    --color-accent-green-glow: rgba(0, 230, 118, 0.25);
+    --color-accent-green-glow: rgba(20, 241, 149, 0.25);
     --color-accent-gold: #E5C158;
     --color-text-main: #ECEFF1;
     --color-text-muted: #8E9BAE;
@@ -31,17 +34,33 @@
   }
 }
 
-/* Subtle stealth grid */
-.bg-stealth-grid {
-  background-image: 
-    linear-gradient(to right, rgba(0, 230, 118, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 230, 118, 0.03) 1px, transparent 1px);
-  background-size: 36px 36px;
+/* Solana & Pump.fun Gradient Utilities */
+.solana-gradient {
+  background: linear-gradient(135deg, #9945FF 0%, #14F195 100%);
 }
 
-/* Stealth radar circle rings */
-.bg-radar-glow {
-  background: radial-gradient(circle at 50% 30%, rgba(0, 230, 118, 0.08) 0%, rgba(9, 11, 13, 0) 65%);
+.solana-text-gradient {
+  background: linear-gradient(135deg, #9945FF 0%, #14F195 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.pumpfun-pill-btn {
+  background: linear-gradient(135deg, #10B981 0%, #14F195 100%);
+  color: #05120B;
+  box-shadow: 0 0 20px rgba(20, 241, 149, 0.35);
+}
+
+.pumpfun-pill-btn:hover {
+  box-shadow: 0 0 28px rgba(20, 241, 149, 0.55);
+}
+
+/* Subtle stealth cyber grid */
+.bg-stealth-grid {
+  background-image: 
+    linear-gradient(to right, rgba(20, 241, 149, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(153, 69, 255, 0.03) 1px, transparent 1px);
+  background-size: 36px 36px;
 }
 
 /* Custom discreet scrollbar */
@@ -50,20 +69,20 @@
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #090B0D;
+  background: #080A0D;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1B2620;
+  background: #17261F;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #00E676;
+  background: #14F195;
 }
 
 /* Subtle stealth glow animations */
 @keyframes eyePulse {
-  0%, 100% { opacity: 0.85; filter: drop-shadow(0 0 4px #00E676); }
-  50% { opacity: 1; filter: drop-shadow(0 0 10px #00E676); }
+  0%, 100% { opacity: 0.85; filter: drop-shadow(0 0 4px #14F195); }
+  50% { opacity: 1; filter: drop-shadow(0 0 12px #9945FF); }
 }
 
 .animate-eye-pulse {

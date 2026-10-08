@@ -29,7 +29,7 @@ export const MemeGenerator: React.FC = () => {
   };
 
   const handleCopyCaption = () => {
-    const textToCopy = `"${currentMeme.title}" - ${currentMeme.caption}\n${currentMeme.hoodReaction}\n${currentMeme.hoodCatReaction}\n#HoodCAT #HCAT #RobinhoodBlockchain`;
+    const textToCopy = `"${currentMeme.title}" - ${currentMeme.caption}\n${currentMeme.hoodReaction}\n${currentMeme.hoodCatReaction}\n#HoodCAT #HCAT #Solana #PumpFun`;
     navigator.clipboard.writeText(textToCopy);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);

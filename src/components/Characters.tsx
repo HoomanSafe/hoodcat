@@ -13,7 +13,7 @@ export const Characters: React.FC = () => {
     "Click me again and I execute an infinite loop of tuna cans.",
     "ACCESS GRANTED: You unlocked HoodCat's secret stashes!",
     "Why follow the white rabbit when you can follow the black hooded cat?",
-    "Robinhood Blockchain node #7 scratched successfully.",
+    "Solana RPC node scratched successfully.",
   ];
 
   const handleHoodCatClick = () => {
@@ -60,7 +60,7 @@ export const Characters: React.FC = () => {
               <span>EASTER EGG UNLOCKED: HOODCAT TOOK OVER THE ROUTER!</span>
             </div>
             <p className="text-sm font-mono text-[#D8E6DE] mt-1">
-              "Congratulations human! You clicked me 3 times. All gas fees on Robinhood Blockchain have been redirected to tuna treats."
+              "Congratulations human! You clicked me 3 times. All gas fees on Solana have been redirected to pump.fun tuna treats."
             </p>
           </div>
         )}

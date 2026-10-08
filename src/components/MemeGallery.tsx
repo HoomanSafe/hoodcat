@@ -15,7 +15,7 @@ export const MemeGallery: React.FC = () => {
     : PROJECT_CONFIG.MEMES.filter((m) => m.tags.includes(selectedTag));
 
   const handleCopy = (meme: MemeItem) => {
-    const text = `"${meme.title}"\n${meme.caption}\n${meme.hoodReaction}\n${meme.hoodCatReaction}\n#HoodCAT #HCAT on Robinhood Blockchain`;
+    const text = `"${meme.title}"\n${meme.caption}\n${meme.hoodReaction}\n${meme.hoodCatReaction}\n#HoodCAT #HCAT on Solana & pump.fun`;
     navigator.clipboard.writeText(text);
     setCopiedId(meme.id);
     setTimeout(() => setCopiedId(null), 2000);

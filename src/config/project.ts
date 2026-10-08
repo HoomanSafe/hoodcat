@@ -1,14 +1,15 @@
 /**
- * MEMEAI — Project Configuration
- * Exclusively tailored for the Robinhood Blockchain ecosystem.
+ * HoodCAT ($HCAT) — Project Configuration
+ * Exclusively tailored for the Solana Blockchain & pump.fun ecosystem.
  * All project parameters, token metrics, and social channels reside here.
  */
 
 export interface SocialLink {
   label: string;
   url: string;
-  icon: 'twitter' | 'telegram' | 'discord' | 'explorer' | 'github' | 'docs';
+  icon: 'pumpfun' | 'twitter' | 'telegram' | 'discord' | 'explorer' | 'dexscreener';
   available: boolean;
+  highlight?: boolean;
 }
 
 export interface MemeItem {
@@ -35,32 +36,39 @@ export interface CharacterProfile {
 
 export const PROJECT_CONFIG = {
   PROJECT_NAME: "HoodCAT",
-  TAGLINE: "The Stealth AI & Meme Duo on Robinhood Blockchain",
-  SUBTITLE: "Hood constructs the neural vectors. HoodCAT executes spontaneous pandemonium.",
+  TAGLINE: "The Stealth AI & Meme Mascot on Solana",
+  SUBTITLE: "Hood constructs the neural vectors. HoodCAT executes spontaneous pandemonium on pump.fun.",
   TICKER: "$HCAT",
-  NETWORK: "Robinhood Blockchain",
-  CONTRACT_ADDRESS: "0x6c3d8f1f2645733444aecaa20ebddd075bf877bb", // Configurable: Update upon official deployment on Robinhood Blockchain
+  NETWORK: "Solana",
+  LAUNCHPAD: "pump.fun",
+  CONTRACT_ADDRESS: "[ADD SOLANA CONTRACT ADDRESS]", // Update with Solana Mint Address upon deployment on pump.fun
+  PUMPFUN_URL: "https://pump.fun", // Link directly to token once created e.g. https://pump.fun/coin/YOUR_MINT_ADDRESS
+  DEXSCREENER_URL: "https://dexscreener.com/solana",
+  SOLSCAN_URL: "https://solscan.io",
   TOTAL_SUPPLY: "1,000,000,000 $HCAT",
-  ECOSYSTEM: "Robinhood Blockchain Native",
-  STATUS: "Stealth Genesis Stage",
+  DECIMALS: 6,
+  TAX: "0% Buy / 0% Sell",
+  LIQUIDITY: "Fair Launch via pump.fun bonding curve -> Auto Raydium Graduation",
+  ECOSYSTEM: "Solana Ecosystem",
+  STATUS: "Launching on pump.fun",
   DESCRIPTION: 
-    "HoodCAT ($HCAT) is the premier independent AI and meme universe engineered exclusively for the Robinhood Blockchain. Led by Hood, an enigmatic digital operative, and HoodCAT, his utterly chaotic feline sidekick, the project merges covert algorithmic intelligence with high-frequency internet meme culture.",
+    "HoodCAT ($HCAT) is the sovereign stealth AI and meme universe built on Solana and launching via pump.fun. Guided by Hood, the shadowy digital mastermind, and powered by HoodCAT, his unhinged feline operative, the duo leverages Solana's 400ms transaction speed and zero-friction bonding curve to distribute pure internet alpha.",
   DISCLAIMER: 
-    "HoodCAT ($HCAT) is an independent, community-driven meme and AI creative universe designed for the Robinhood Blockchain ecosystem. HoodCAT is not officially affiliated with, operated by, sponsored by, or endorsed by Robinhood Markets, Inc. or any of its subsidiaries.",
+    "HoodCAT ($HCAT) is an independent community meme and AI cultural initiative launching on Solana via pump.fun. Cryptographic assets involve market volatility. Always verify contract addresses before swapping.",
 
-  
   STATS: [
-    { label: "TARGET CHAIN", value: "Robinhood Blockchain" },
-    { label: "OPERATIVES", value: "2 (Hood + HoodCat)" },
-    { label: "AI PREDICTABILITY", value: "0.04% (HoodCat effect)" },
-    { label: "MEME VELOCITY", value: "Instantaneous" },
+    { label: "BLOCKCHAIN", value: "Solana (SPL)" },
+    { label: "LAUNCHPAD", value: "pump.fun" },
+    { label: "BONDING CURVE", value: "Fair Launch (No Pre-mine)" },
+    { label: "FINALITY SPEED", value: "~400ms Instant" },
   ],
 
   SOCIAL_LINKS: [
-    { label: "X / Twitter", url: "https://x.com/hoodcatfun", icon: "twitter", available: true },
+    { label: "pump.fun", url: "https://pump.fun", icon: "pumpfun", available: true, highlight: true },
+    { label: "X / Twitter", url: "#", icon: "twitter", available: true },
     { label: "Telegram", url: "#", icon: "telegram", available: true },
-    { label: "Discord", url: "#", icon: "discord", available: true },
-    { label: "Robinhood Chain Explorer", url: "#", icon: "explorer", available: false },
+    { label: "DexScreener", url: "https://dexscreener.com/solana", icon: "dexscreener", available: true },
+    { label: "Solscan", url: "https://solscan.io", icon: "explorer", available: true },
   ] as SocialLink[],
 
   CHARACTERS: {
@@ -68,85 +76,85 @@ export const PROJECT_CONFIG = {
       name: "Hood",
       alias: "The Ghost Operator",
       archetype: "Modern Digital Stealth Mastermind",
-      role: "Strategic AI Lead & Node Architect",
-      quote: "Why compute in daylight when the void delivers higher throughput?",
+      role: "Strategic AI Lead & Solana Node Architect",
+      quote: "Why compute in daylight when the Solana ledger processes at 65,000 TPS?",
       traits: ["Calculated", "Deep Cover", "Neural Hacker", "Calm Under Fire"],
       signatureGear: "Zero-Trace Stealth Cowl & Sub-Visual Retinal Scanners",
       image: "/assets/hood-hero.webp",
-      bio: "Hood is a modern, shadowy technologist operating on the fringes of the Robinhood Blockchain. He doesn't wield medieval bows or neon superhero tropes—he works in quiet, dark code. Armed with proprietary AI models, he redistributes humor, intelligence, and decentralized culture to the internet.",
+      bio: "Hood is a modern, shadowy technologist operating on the high-speed rails of Solana. He doesn't wield medieval bows or neon superhero tropes—he works in quiet, dark code. Armed with proprietary AI models, he monitors pump.fun bonding curves and redistributes decentralized culture to the internet.",
     } as CharacterProfile,
     HOODCAT: {
       name: "HoodCat",
       alias: "Unit 0-Chaos",
       archetype: "Sentient Unpredictable Feline",
-      role: "Chief of Meme Havoc & Button Masher",
-      quote: "You called it a strategic plan. I called it a scratching post.",
-      traits: ["Chaotic Neutral", "Zero Latency Paw", "Snack-Motivated", "Loves Red Buttons"],
+      role: "Chief of Meme Havoc & pump.fun Ape",
+      quote: "You called it a bonding curve. I called it a ramp for my zoomies.",
+      traits: ["Chaotic Neutral", "Zero Latency Paw", "Snack-Motivated", "Loves Green Candles"],
       signatureGear: "Micro Stealth Hood & Emerald Photon Collar",
       image: "/assets/hoodcat-hero.webp",
-      bio: "Found deep inside a server vent on the Robinhood Blockchain node cluster, HoodCat refused to leave. Equipped with a matching miniature cowl and hyper-dilated emerald eyes, HoodCat possesses a terrifyingly high IQ paired with zero impulse control. He is the heartbeat of pure internet meme magic.",
+      bio: "Found deep inside a Solana validator datacenter, HoodCat refused to leave. Equipped with a matching miniature cowl and hyper-dilated emerald eyes, HoodCat possesses a terrifyingly high IQ paired with zero impulse control. He is the heartbeat of pure pump.fun meme mania.",
     } as CharacterProfile,
   },
 
   MEMES: [
     {
       id: "meme-01",
-      title: "The Big Red Button Protocol",
-      caption: "Hood planned a 48-hour zero-slippage liquidity routing. HoodCat saw a glowing button.",
+      title: "The Big Green Button Protocol",
+      caption: "Hood planned a sophisticated liquidity routing model on Solana. HoodCat saw the green 'BUY' button on pump.fun.",
       image: "/assets/hoodcat-meme-01.webp",
-      hoodReaction: "Hood: 'That wasn't the testnet, was it...?'",
-      hoodCatReaction: "HoodCat: 'It was shiny. Next question.'",
-      tags: ["Execution", "Terminal", "Zero Regrets"],
+      hoodReaction: "Hood: 'Did you just market-order the entire bonding curve...?'",
+      hoodCatReaction: "HoodCat: 'It was green. Green means go fast. Next question.'",
+      tags: ["Execution", "PumpFun", "ZeroRegrets"],
     },
     {
       id: "meme-02",
       title: "The Catnap Candle Spike",
-      caption: "While HoodCat slept on the mechanical keyboard, a +4,200% Robinhood Blockchain candle occurred.",
+      caption: "While HoodCat slept on the mechanical keyboard, a god-candle broke the chart on DexScreener.",
       image: "/assets/hoodcat-meme-02.webp",
-      hoodReaction: "Hood: 'Do not wake him up. Nobody move.'",
-      hoodCatReaction: "HoodCat: 'Zzz... purr... moon... zzz'",
-      tags: ["Charts", "SleepAlpha", "GreenCandles"],
+      hoodReaction: "Hood: 'Do not wake him up. Solana validators are sweating.'",
+      hoodCatReaction: "HoodCat: 'Zzz... purr... 100k SOL volume... zzz'",
+      tags: ["Charts", "SleepAlpha", "SolanaCandles"],
     },
     {
       id: "meme-03",
       title: "Master Strategy vs. The Laser Dot",
-      caption: "Hood wrote 40,000 lines of algorithmic documentation. HoodCat spotted a rogue green photon.",
+      caption: "Hood wrote 40,000 lines of Solana SPL token analytics. HoodCat spotted a rogue green photon.",
       image: "/assets/hoodcat-meme-03.webp",
-      hoodReaction: "Hood: 'Did you absorb the tokenomic model?'",
-      hoodCatReaction: "HoodCat: 'THE DOT MUST DIE.'",
+      hoodReaction: "Hood: 'Did you absorb the Raydium graduation target?'",
+      hoodCatReaction: "HoodCat: 'THE GREEN DOT MUST BE APED.'",
       tags: ["Strategy", "Laser", "Distraction"],
     },
     {
       id: "meme-04",
       title: "Boss Level Smugness",
-      caption: "HoodCat sporting dark shades, guarding the vault with supreme unbothered posture.",
+      caption: "HoodCat sporting dark shades, guarding the pump.fun King of the Hill crown with supreme unbothered posture.",
       image: "/assets/hoodcat-meme-04.webp",
       hoodReaction: "Hood: 'Where did you get those shades?'",
-      hoodCatReaction: "HoodCat: 'Borrowed. Permanently.'",
-      tags: ["Swag", "Shades", "VaultKeeper"],
+      hoodCatReaction: "HoodCat: 'King of the Hill privileges, human.'",
+      tags: ["Swag", "Shades", "KingOfTheHill"],
     },
     {
       id: "meme-05",
       title: "Cool Operatives Never Look Back",
-      caption: "Walking away from a glowing data cluster eruption without batting an eye.",
+      caption: "Walking away from a glowing data cluster eruption without batting an eye after completing the bonding curve.",
       image: "/assets/hoodcat-meme-05.webp",
-      hoodReaction: "Hood: 'Clean breach. Zero logs left behind.'",
+      hoodReaction: "Hood: 'Bonding curve 100%. Raydium migration engaged.'",
       hoodCatReaction: "HoodCat: 'Munching on decrypted tuna chips.'",
       tags: ["SlowMotion", "Badass", "CleanEscape"],
     },
     {
       id: "meme-06",
       title: "Error 404: Key Consumed",
-      caption: "Private encryption key was misplaced. Suspect was found licking green crumbs off whiskers.",
+      caption: "Phantom wallet private key was misplaced. Suspect was found licking green crumbs off whiskers.",
       image: "/assets/hoodcat-meme-06.webp",
-      hoodReaction: "Hood: 'Tell me you didn't swallow the seed phrase.'",
-      hoodCatReaction: "HoodCat: 'Crunchy. Tasted like 24 words.'",
+      hoodReaction: "Hood: 'Tell me you didn't swallow the 12-word seed phrase.'",
+      hoodCatReaction: "HoodCat: 'Crunchy. Tasted like Solana tokens.'",
       tags: ["SeedPhrase", "Cryptic", "Oops"],
     },
     {
       id: "meme-07",
       title: "The Keynote Mic Batting Incident",
-      caption: "Hood delivers an earnest manifesto on decentralized AI. HoodCat tests gravity on the microphone.",
+      caption: "Hood delivers an earnest manifesto on decentralized AI on Solana. HoodCat tests gravity on the microphone.",
       image: "/assets/hoodcat-meme-07.webp",
       hoodReaction: "Hood: 'Ladies and gentlemen, our technical co-founder.'",
       hoodCatReaction: "HoodCat: '*smack* ...thud. Perfect.'",
@@ -155,10 +163,10 @@ export const PROJECT_CONFIG = {
     {
       id: "meme-08",
       title: "We Run This Node",
-      caption: "The final stare: one cold strategic mind, one manic unpredictable companion.",
+      caption: "The final stare: one cold strategic mind, one manic unpredictable companion dominating pump.fun.",
       image: "/assets/hoodcat-meme-08.webp",
-      hoodReaction: "Hood: 'The Robinhood Blockchain has never seen a duo like this.'",
-      hoodCatReaction: "HoodCat: 'And they never will again.'",
+      hoodReaction: "Hood: 'Solana has never seen a stealth duo like this.'",
+      hoodCatReaction: "HoodCat: 'And pump.fun will never be the same.'",
       tags: ["Standoff", "Partners", "Genesis"],
     },
   ] as MemeItem[],

@@ -1,7 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Terminal, Send, Sparkles, RefreshCw, Cpu, CheckCircle, ShieldAlert, Zap } from 'lucide-react';
+import { Terminal, Send, Sparkles, RefreshCw, Cpu, CheckCircle, ShieldAlert, Zap, ExternalLink } from 'lucide-react';
 import { PROJECT_CONFIG } from '../config/project';
 import { StealthImage } from './StealthImage';
+import { PumpFunIcon, SolanaIcon } from './PumpFunIcon';
 
 interface TerminalLog {
   id: string;
@@ -17,19 +18,19 @@ export const AiTerminal: React.FC = () => {
     {
       id: 'init-1',
       sender: 'system',
-      text: 'HOOD_NODE_OS v2.4 initialized. Connected to Robinhood Blockchain local stealth listener.',
+      text: 'HOOD_SOLANA_OS v4.2 initialized. Connected to Solana cluster listener & pump.fun bonding curve.',
       timestamp: '00:01:14',
     },
     {
       id: 'init-2',
       sender: 'hood',
-      text: "Operator authenticated. Welcome to HoodCAT ($HCAT) terminal. HoodCat is currently lurking on the main console.",
+      text: "Operator authenticated. Welcome to HoodCAT ($HCAT) stealth terminal. HoodCat is currently monitoring the pump.fun chart.",
       timestamp: '00:01:15',
     },
     {
       id: 'init-3',
       sender: 'hoodcat',
-      text: "*paws at keyboard* TYPE SOMETHING OR I PRESS THE RED BUTTON.",
+      text: "*swipes paw across screen* APE THE GREEN CANDLE OR I CHEW THE FIBER OPTIC CABLE.",
       timestamp: '00:01:17',
     },
   ]);
@@ -44,9 +45,9 @@ export const AiTerminal: React.FC = () => {
   const quickCommands = [
     { label: 'generate meme', cmd: 'generate-meme' },
     { label: 'hood strategy', cmd: 'hood-strategy' },
-    { label: 'hoodcat status', cmd: 'hoodcat-status' },
-    { label: 'chain telemetry', cmd: 'chain-status' },
-    { label: 'tuna treats', cmd: 'feed-cat' },
+    { label: 'pump.fun status', cmd: 'pumpfun-status' },
+    { label: 'solana tps', cmd: 'solana-tps' },
+    { label: 'feed hoodcat', cmd: 'feed-cat' },
     { label: 'clear', cmd: 'clear' },
   ];
 
@@ -82,7 +83,7 @@ export const AiTerminal: React.FC = () => {
         responseLog = {
           id: `resp-${Date.now()}`,
           sender: 'hoodcat',
-          text: `[MEME TRANSMITTED] HoodCat: "You demanded a meme? Witness '${randomMeme.title}'! Straight from the encrypted memory cache."`,
+          text: `[MEME TRANSMITTED] HoodCat: "You demanded a meme? Behold '${randomMeme.title}'! Freshly minted from our stealth cache."`,
           timestamp: new Date().toLocaleTimeString(),
           memePreview: randomMeme.image,
         };
@@ -90,42 +91,42 @@ export const AiTerminal: React.FC = () => {
         responseLog = {
           id: `resp-${Date.now()}`,
           sender: 'hood',
-          text: `Hood: "Objective: Establish HoodCAT ($HCAT) as the sovereign meme titan on Robinhood Blockchain. Steps: 1) Deploy humor without slippage. 2) Outsmart legacy tokens. 3) Keep HoodCat away from the router power plug."`,
+          text: `Hood: "Master Directive: Propel HoodCAT ($HCAT) through the pump.fun bonding curve and achieve 100% Raydium graduation. 1) Deploy high-throughput memes. 2) Maintain sub-second market reaction. 3) Keep HoodCat away from the emergency power strip."`,
           timestamp: new Date().toLocaleTimeString(),
         };
-      } else if (cmd.includes('hoodcat') || cmd.includes('status')) {
+      } else if (cmd.includes('pump') || cmd.includes('bonding')) {
         responseLog = {
           id: `resp-${Date.now()}`,
           sender: 'hoodcat',
-          text: `HoodCat: "Status: 99.8% mischief, 0.2% nap time. Heart rate steady at 180bpm. Ready to jump on keyboard at critical moments."`,
+          text: `HoodCat: "PUMP.FUN STATUS: Green candles detected! Bonding curve locked in fair mode. Next stop: King of the Hill crown!"`,
           timestamp: new Date().toLocaleTimeString(),
         };
-      } else if (cmd.includes('chain') || cmd.includes('robinhood')) {
+      } else if (cmd.includes('solana') || cmd.includes('tps') || cmd.includes('chain')) {
         responseLog = {
           id: `resp-${Date.now()}`,
           sender: 'system',
-          text: `SYSTEM TELEMETRY: Ecosystem verified -> [ROBINHOOD BLOCKCHAIN ONLY]. No cross-chain contaminants detected. Latency: <12ms. Status: Optimal.`,
+          text: `SOLANA CLUSTER TELEMETRY: Slot height synced. Average block latency: ~400ms. Cluster TPS: 2,860. Gas cost: <0.000005 SOL ($0.0004). Status: PEAK EFFICIENCY.`,
           timestamp: new Date().toLocaleTimeString(),
         };
       } else if (cmd.includes('feed') || cmd.includes('tuna') || cmd.includes('treat')) {
         responseLog = {
           id: `resp-${Date.now()}`,
           sender: 'hoodcat',
-          text: `HoodCat: "*CHOMP* Decrypted salmon packet consumed. Threat level temporarily reduced from Extreme to Moderate."`,
+          text: `HoodCat: "*NOM NOM* Decrypted tuna packet devoured. Threat level lowered to: 'Purring but will ape again'.`,
           timestamp: new Date().toLocaleTimeString(),
         };
       } else if (cmd.includes('help')) {
         responseLog = {
           id: `resp-${Date.now()}`,
           sender: 'hood',
-          text: `AVAILABLE OPERATIONS: 'generate-meme', 'hood-strategy', 'hoodcat-status', 'chain-status', 'feed-cat', 'clear'.`,
+          text: `OPERATIONAL COMMANDS: 'generate-meme', 'hood-strategy', 'pumpfun-status', 'solana-tps', 'feed-cat', 'clear'.`,
           timestamp: new Date().toLocaleTimeString(),
         };
       } else {
         responseLog = {
           id: `resp-${Date.now()}`,
           sender: 'hoodcat',
-          text: `HoodCat: "Command '${rawCmd}' not recognized. I chewed the syntax manual. Try clicking the quick buttons below."`,
+          text: `HoodCat: "Instruction '${rawCmd}' not found in the Solana handbook. Try clicking the quick command buttons below."`,
           timestamp: new Date().toLocaleTimeString(),
         };
       }
@@ -136,37 +137,37 @@ export const AiTerminal: React.FC = () => {
   };
 
   return (
-    <section id="ai-terminal" className="py-24 bg-[#080B0D] border-t border-[#141C17] relative">
+    <section id="ai-terminal" className="py-24 bg-[#080A0E] border-t border-[#141C1A] relative">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Terminal Header */}
         <div className="text-center max-w-2xl mx-auto mb-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#111A15] border border-[#1E3024] text-xs font-mono text-[#00E676] mb-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#0F141C] border border-[#20322B] text-xs font-mono text-[#14F195] mb-3">
             <Cpu className="w-3.5 h-3.5" />
-            <span>SIMULATED COMMAND INTERFACE</span>
+            <span>SOLANA NODE CONSOLE</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-black font-display text-white tracking-tight uppercase">
             HoodCat AI Console
           </h2>
-          <p className="mt-2 text-xs sm:text-sm text-[#82968B]">
-            Interactive local node console. Type instructions or trigger direct commands below.
+          <p className="mt-2 text-xs sm:text-sm text-[#829690]">
+            Simulated Solana command interface. Monitor cluster telemetry or trigger HoodCat meme executions.
           </p>
         </div>
 
         {/* Tactical Terminal Frame */}
-        <div className="rounded-2xl bg-[#090D0F] border border-[#1A261F] shadow-[0_20px_50px_rgba(0,0,0,0.8)] overflow-hidden flex flex-col h-[520px]">
+        <div className="rounded-2xl bg-[#090C11] border border-[#1A2824] shadow-[0_20px_50px_rgba(0,0,0,0.85)] overflow-hidden flex flex-col h-[520px]">
           
           {/* Terminal Window Bar */}
-          <div className="px-4 py-3 bg-[#0E1418] border-b border-[#18231C] flex items-center justify-between text-xs font-mono">
+          <div className="px-4 py-3 bg-[#0E131A] border-b border-[#182521] flex items-center justify-between text-xs font-mono">
             <div className="flex items-center gap-2">
               <span className="w-3 h-3 rounded-full bg-[#EF4444]/80" />
               <span className="w-3 h-3 rounded-full bg-[#F59E0B]/80" />
               <span className="w-3 h-3 rounded-full bg-[#10B981]/80" />
-              <span className="ml-2 text-[#7E9388] hidden sm:inline">bash — memeai-node@robinhood-chain</span>
+              <span className="ml-2 text-[#7E938D] hidden sm:inline">bash — hoodcat-node@solana-pumpfun</span>
             </div>
-            <div className="flex items-center gap-2 text-[#00E676]">
-              <span className="w-2 h-2 rounded-full bg-[#00E676] animate-pulse" />
-              <span>LIVE STEALTH PROTOCOL</span>
+            <div className="flex items-center gap-2 text-[#14F195]">
+              <span className="w-2 h-2 rounded-full bg-[#14F195] animate-pulse" />
+              <span>SOLANA MAINNET SYNCED</span>
             </div>
           </div>
 
@@ -174,30 +175,30 @@ export const AiTerminal: React.FC = () => {
           <div className="flex-1 p-4 sm:p-6 overflow-y-auto font-mono text-xs sm:text-sm space-y-4">
             {logs.map((log) => (
               <div key={log.id} className="space-y-1">
-                <div className="flex items-center gap-2 text-[11px] text-[#55695E]">
+                <div className="flex items-center gap-2 text-[11px] text-[#556963]">
                   <span>[{log.timestamp}]</span>
-                  {log.sender === 'user' && <span className="text-[#E2ECE6] font-bold">OPERATOR &gt;</span>}
-                  {log.sender === 'system' && <span className="text-[#00E676] font-bold">NODE_SYS &gt;</span>}
-                  {log.sender === 'hood' && <span className="text-[#38BDF8] font-bold">HOOD [LEAD] &gt;</span>}
-                  {log.sender === 'hoodcat' && <span className="text-[#E5C158] font-bold">HOODCAT [CHAOS] &gt;</span>}
+                  {log.sender === 'user' && <span className="text-[#E2ECE8] font-bold">OPERATOR &gt;</span>}
+                  {log.sender === 'system' && <span className="text-[#9945FF] font-bold">SOLANA_CORE &gt;</span>}
+                  {log.sender === 'hood' && <span className="text-[#38BDF8] font-bold">HOOD [STRATEGY] &gt;</span>}
+                  {log.sender === 'hoodcat' && <span className="text-[#14F195] font-bold">HOODCAT [CHAOS] &gt;</span>}
                 </div>
 
                 <div
-                  className={`p-2.5 rounded-lg text-xs leading-relaxed ${
+                  className={`p-3 rounded-lg text-xs leading-relaxed ${
                     log.sender === 'user'
-                      ? 'bg-[#121A1E] text-white border border-[#1C2C34]'
+                      ? 'bg-[#121A22] text-white border border-[#1C2C3A]'
                       : log.sender === 'hoodcat'
-                      ? 'bg-[#181912] text-[#EFEAD8] border border-[#2B2A18]'
+                      ? 'bg-[#0E1A16] text-[#E0F8EC] border border-[#183628]'
                       : log.sender === 'hood'
-                      ? 'bg-[#0E161C] text-[#CBE3F3] border border-[#162B36]'
-                      : 'bg-[#0B1310] text-[#93C8A9] border border-[#15291E]'
+                      ? 'bg-[#0E1620] text-[#CBE3F3] border border-[#162B3B]'
+                      : 'bg-[#12101E] text-[#D8C7F8] border border-[#261E3D]'
                   }`}
                 >
                   {log.text}
 
                   {/* If log includes meme preview */}
                   {log.memePreview && (
-                    <div className="mt-3 max-w-xs rounded-lg overflow-hidden border border-[#2B3B30]">
+                    <div className="mt-3 max-w-xs rounded-lg overflow-hidden border border-[#2B3B34]">
                       <StealthImage
                         src={log.memePreview}
                         alt="Terminal Meme Preview"
@@ -211,21 +212,21 @@ export const AiTerminal: React.FC = () => {
             ))}
 
             {isProcessing && (
-              <div className="flex items-center gap-2 text-xs font-mono text-[#00E676] animate-pulse">
-                <span>HoodCat is executing chaotic calculations...</span>
+              <div className="flex items-center gap-2 text-xs font-mono text-[#14F195] animate-pulse">
+                <span>HoodCat is executing chaotic calculations across Solana nodes...</span>
               </div>
             )}
             <div ref={bottomRef} />
           </div>
 
           {/* Quick Command Suggestions */}
-          <div className="px-4 py-2 bg-[#0C1215] border-t border-[#152119] flex items-center gap-2 overflow-x-auto">
-            <span className="text-[10px] font-mono text-[#6A7F73] shrink-0 uppercase">Presets:</span>
+          <div className="px-4 py-2 bg-[#0C1117] border-t border-[#15231F] flex items-center gap-2 overflow-x-auto">
+            <span className="text-[10px] font-mono text-[#6A7F78] shrink-0 uppercase">Presets:</span>
             {quickCommands.map((q) => (
               <button
                 key={q.cmd}
                 onClick={() => handleCommand(q.cmd)}
-                className="px-2.5 py-1 rounded bg-[#101814] hover:bg-[#18261E] border border-[#1B2B21] text-[11px] font-mono text-[#A8BEB2] hover:text-[#00E676] whitespace-nowrap transition-colors"
+                className="px-2.5 py-1 rounded bg-[#10171F] hover:bg-[#16222C] border border-[#1B2B26] text-[11px] font-mono text-[#A8BEB7] hover:text-[#14F195] whitespace-nowrap transition-colors"
               >
                 ${q.label}
               </button>
@@ -238,19 +239,19 @@ export const AiTerminal: React.FC = () => {
               e.preventDefault();
               handleCommand(inputVal);
             }}
-            className="p-3 bg-[#0B1013] border-t border-[#18251D] flex items-center gap-2"
+            className="p-3 bg-[#0B0F15] border-t border-[#182723] flex items-center gap-2"
           >
-            <div className="text-[#00E676] font-mono text-sm pl-2 font-bold">&gt;</div>
+            <div className="text-[#14F195] font-mono text-sm pl-2 font-bold">&gt;</div>
             <input
               type="text"
               value={inputVal}
               onChange={(e) => setInputVal(e.target.value)}
-              placeholder="Type command ('generate meme', 'hood strategy', 'feed cat')..."
-              className="flex-1 bg-transparent border-none outline-none font-mono text-xs sm:text-sm text-white placeholder-[#4E6256] focus:ring-0"
+              placeholder="Type command ('generate meme', 'pump.fun status', 'solana tps')..."
+              className="flex-1 bg-transparent border-none outline-none font-mono text-xs sm:text-sm text-white placeholder-[#4E625B] focus:ring-0"
             />
             <button
               type="submit"
-              className="p-2 rounded-lg bg-[#00E676] hover:bg-[#00c864] text-[#090B0D] transition-colors"
+              className="p-2 rounded-lg bg-[#14F195] hover:bg-[#10d482] text-[#080A0D] transition-colors"
               aria-label="Send command"
             >
               <Send className="w-4 h-4" />
