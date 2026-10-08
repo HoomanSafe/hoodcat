@@ -41,7 +41,7 @@ export const PROJECT_CONFIG = {
   TICKER: "$HCAT",
   NETWORK: "Solana",
   LAUNCHPAD: "pump.fun",
-  CONTRACT_ADDRESS: "[ADD SOLANA CONTRACT ADDRESS]", // Update with Solana Mint Address upon deployment on pump.fun
+  CONTRACT_ADDRESS: "TBD", // Update with Solana Mint Address upon deployment on pump.fun
   PUMPFUN_URL: "https://pump.fun", // Link directly to token once created e.g. https://pump.fun/coin/YOUR_MINT_ADDRESS
   DEXSCREENER_URL: "https://dexscreener.com/solana",
   SOLSCAN_URL: "https://solscan.io",
