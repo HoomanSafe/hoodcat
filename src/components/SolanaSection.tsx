@@ -25,7 +25,7 @@ export const SolanaSection: React.FC = () => {
             Built On Solana. Powered by pump.fun.
           </h2>
           <p className="mt-3 text-sm sm:text-base text-[#8CA09A]">
-            HoodCAT ($HCAT) combines instant 400ms blockchain finality with the purest fair launch mechanism on the internet.
+            Neura Cat ($NCAT) combines instant 400ms blockchain finality with the purest fair launch mechanism on the internet.
           </p>
         </div>
 
@@ -90,10 +90,10 @@ export const SolanaSection: React.FC = () => {
               <span>BONDING CURVE READY</span>
             </div>
             <h3 className="font-display font-black text-2xl sm:text-3xl text-white">
-              Ready to Join the HoodCAT Collective?
+              Ready to Join the Neura Cat Collective?
             </h3>
             <p className="text-xs sm:text-sm text-[#8EA299] leading-relaxed">
-              Connect your Phantom or Solflare wallet on pump.fun and trade $HCAT instantly with zero slippage issues.
+              Connect your Phantom or Solflare wallet on pump.fun and trade $NCAT instantly with zero slippage issues.
             </p>
           </div>
 
