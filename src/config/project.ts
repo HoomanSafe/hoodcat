@@ -65,7 +65,7 @@ export const PROJECT_CONFIG = {
 
   SOCIAL_LINKS: [
     { label: "pump.fun", url: "https://pump.fun", icon: "pumpfun", available: true, highlight: true },
-    { label: "X / Twitter", url: "#", icon: "twitter", available: true },
+    { label: "X / Twitter", url: "https://x.com/neuracatfun", icon: "twitter", available: true },
     { label: "Telegram", url: "#", icon: "telegram", available: true },
     { label: "DexScreener", url: "https://dexscreener.com/solana", icon: "dexscreener", available: true },
     { label: "Solscan", url: "https://solscan.io", icon: "explorer", available: true },
